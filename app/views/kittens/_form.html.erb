@@ -11,6 +11,18 @@
     </div>
   <% end %>
 
+  <%= form.label("Name") %>
+  <%= form.text_field :name, placeholder: 'Enter new kitten name here...', required: true  %>
+
+  <%= form.label("Age") %>
+  <%= form.number_field :age, placeholder: '0', min: 0, required: true %>
+
+  <%= form.label("Cuteness") %>
+  <%= form.number_field :cuteness, placeholder: 'How cute is it: 1 to 10?', in: 1..10, required: true %>
+
+  <%= form.label("Softness") %>
+  <%= form.number_field :softness, placeholder: 'How soft is it: 1 to 10?', in: 1..10, required: true %>
+
   <div class="actions">
     <%= form.submit %>
   </div>
